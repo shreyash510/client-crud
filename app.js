@@ -1,13 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const blogRouter = require("./routes/BlogRoutes");
+const clientRoute = require("./routes/clientRoute");
 const PORT = 8000;
 const app = express();
 
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/api/client", blogRouter);
+app.use("/api/client", clientRoute);
 
 //configure mongoose
 mongoose.connect(

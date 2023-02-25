@@ -1,11 +1,11 @@
 const express = require("express");
 const {
-  getApi,
-  createBlog,
-  getBlogById,
-  updateBlog,
-  deleteBlog,
-} = require("../controllers/BlogController");
+    getApi
+  // createBlog,
+  // getBlogById,
+  // updateBlog,
+  // deleteBlog,
+} = require("../controllers/clientController");
 
 const router = express.Router();
 
