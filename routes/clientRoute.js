@@ -2,21 +2,17 @@ const express = require("express");
 const {
     getApi,
   createClient,
-  // getBlogById,
-  // updateBlog,
-  // deleteBlog,
+  updateClient,
+  getClientById,
+  deleteClient
 } = require("../controllers/clientController");
 
 const router = express.Router();
 
 router.route("/").get(getApi)
 router.route("/create").post(createClient)
-// .post(createBlog);
-// router.route("/:id").get(getBlogById).put(updateBlog).delete(deleteBlog);
-
-
-// router.get("/", (req, res) => {
-//   res.send("about")
-// })
+router.route("/update").patch(updateClient)
+router.route("/get/:id").patch(getClientById)
+router.route("/delete").patch(deleteClient)
 
 module.exports = router;

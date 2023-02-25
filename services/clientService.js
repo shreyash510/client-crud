@@ -1,20 +1,20 @@
-const clientSchema = require("../models/clientModel");
+const clientModel = require("../models/clientModel");
 
 exports.getApi = async () => {
-  return await clientSchema.find();
+  return await clientModel.find();
 };
 
 exports.createClient = async (client) => {
-  return await clientSchema.create(client);
+  return await clientModel.create(client);
 };
-// exports.getBlogById = async (id) => {
-//   return await BlogModel.findById(id);
-// };
+exports.getClientById = async (id) => {
+  return await clientModel.findById(id);
+};
 
-// exports.updateBlog = async (id, blog) => {
-//   return await BlogModel.findByIdAndUpdate(id, blog);
-// };
+exports.updateClient = async (id, client) => {
+  return await clientModel.findByIdAndUpdate(id, client);
+};
 
-// exports.deleteBlog = async (id) => {
-//   return await BlogModel.findByIdAndDelete(id);
-// };
+exports.deleteClient = async (id) => {
+  return await clientModel.findByIdAndDelete(id);
+};
