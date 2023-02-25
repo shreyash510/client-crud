@@ -1,7 +1,6 @@
 const clientService = require("../services/clientService");
 
 exports.getApi = async (req, res) => {
-  console.log('hellow world')
   try {
     const client = await clientService.getApi();
     res.json({ data: client, status: "success" });
