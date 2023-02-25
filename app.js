@@ -1,13 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const clientRoute = require("./routes/clientRoute");
+var cors = require('cors')
+
 const PORT = 8000;
 const app = express();
 
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 app.use("/api/client", clientRoute);
+
 
 //configure mongoose
 mongoose.connect(
