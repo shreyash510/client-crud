@@ -12,7 +12,7 @@ const router = express.Router();
 router.route("/").get(getApi)
 router.route("/create").post(createClient)
 router.route("/update").patch(updateClient)
-router.route("/get/:id").patch(getClientById)
-router.route("/delete").patch(deleteClient)
+router.route("/get/:id").get(getClientById)
+router.route("/delete").delete(deleteClient)
 
 module.exports = router;
