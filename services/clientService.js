@@ -4,9 +4,9 @@ exports.getApi = async () => {
   return await clientSchema.find();
 };
 
-// exports.createBlog = async (blog) => {
-//   return await BlogModel.create(blog);
-// };
+exports.createClient = async (client) => {
+  return await clientSchema.create(client);
+};
 // exports.getBlogById = async (id) => {
 //   return await BlogModel.findById(id);
 // };

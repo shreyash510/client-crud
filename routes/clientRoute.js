@@ -1,7 +1,7 @@
 const express = require("express");
 const {
-    getApi
-  // createBlog,
+    getApi,
+  createClient,
   // getBlogById,
   // updateBlog,
   // deleteBlog,
@@ -10,6 +10,7 @@ const {
 const router = express.Router();
 
 router.route("/").get(getApi)
+router.route("/create").post(createClient)
 // .post(createBlog);
 // router.route("/:id").get(getBlogById).put(updateBlog).delete(deleteBlog);
 

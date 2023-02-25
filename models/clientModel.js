@@ -2,13 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const clientSchema = new Schema({
-  title: String,
-  // body: String,
-  // image: String,
-  // createdAt: {
-  //   type: Date,
-  //   default: Date.now,
-  // },
+  fullName: String,
+  password: String,
+  dob: Date,
+  gender: String,
+  mobile: Number,
+  email: String
 });
 
 module.exports = mongoose.model("client", clientSchema);

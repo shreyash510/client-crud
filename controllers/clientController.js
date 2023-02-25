@@ -12,14 +12,16 @@ exports.getApi = async (req, res) => {
   }
 };
 
-// exports.createBlog = async (req, res) => {
-//   try {
-//     const blog = await clientService.createBlog(req.body);
-//     res.json({ data: blog, status: "success" });
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// };
+
+
+exports.createClient = async (req, res) => {
+  try {
+    const blog = await clientService.createClient(req.body);
+    res.json({ data: blog, status: "success" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
 
 // exports.getBlogById = async (req, res) => {
 //   try {
